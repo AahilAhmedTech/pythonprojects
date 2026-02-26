@@ -1,7 +1,14 @@
-print("hello,github")
-print("Learning GitHub Desktop and VS Code!")
-print("This is a test change in the 'test' branch")
-print("manual merge in GitHub")
-print("this is a p test line")
+from flask import Flask
 
+app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return """
+    <h1>Hello, GitHub!</h1>
+    <p>Learning GitHub Desktop and VS Code!</p>
+    <p>This is my first Flask web app.</p>
+    """
+
+if __name__ == "__main__":
+    app.run(debug=True)
